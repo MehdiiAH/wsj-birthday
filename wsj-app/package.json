@@ -1,0 +1,26 @@
+{
+  "name": "wsj-birthday",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/csv-to-json.mjs && next build",
+    "start": "next start",
+    "convert": "node scripts/csv-to-json.mjs"
+  },
+  "dependencies": {
+    "next": "15.1.4",
+    "next-intl": "^3.26.3",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5",
+    "tailwindcss": "^3.4",
+    "autoprefixer": "^10",
+    "postcss": "^8"
+  }
+}

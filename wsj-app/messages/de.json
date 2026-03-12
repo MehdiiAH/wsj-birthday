@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "japanese": "週刊少年ジャンプ",
+    "title1": "JUMP",
+    "title2": "BIRTHDAY",
+    "subtitle": "Welche Ausgabe des Weekly Shōnen Jump erschien an deinem Geburtstag?"
+  },
+  "search": {
+    "label": "Dein Geburtsdatum",
+    "period": "Abgedeckter Zeitraum: {min} – {max}",
+    "loading": "Datenbank wird geladen…",
+    "error": "Ladefehler. Seite neu laden.",
+    "outOfRange": "Datum außerhalb des Zeitraums ({min}–{max}).",
+    "button": "Meine Ausgabe finden",
+    "searching": "Suche…"
+  },
+  "badges": {
+    "yourIssue": "Deine Geburtsausgabe",
+    "currentIssue": "Ausgabe an diesem Tag"
+  },
+  "result": {
+    "publisher": "Weekly Shōnen Jump",
+    "released": "Erschienen am {date}",
+    "doubleIssue": "Doppelausgabe — deckt 2 Wochen ab",
+    "biweekly": "Zweiwöchentliche Periode (vor Okt. 1969)",
+    "firstOfYear": "1. Ausgabe des Jahres!",
+    "ageLabel": "Alter dieser Ausgabe",
+    "ageYears": "{count, plural, one {# Jahr} other {# Jahre}}",
+    "noImage": "Kein Bild",
+    "notCovered": "Kein neues Heft an diesem Tag (Redaktionspause). Diese Ausgabe deckte den Zeitraum ab."
+  },
+  "share": {
+    "copy": "Ergebnis teilen",
+    "copied": "Link kopiert!",
+    "tweet": "Ich wurde am {date} geboren — Weekly Shōnen Jump Ausgabe {issue} lag damals in den Läden! 🗞️"
+  },
+  "footer": {
+    "credit": "Daten: <link>Comic Vine</link> · Mit ❤️"
+  }
+}

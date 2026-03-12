@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "japanese": "週刊少年ジャンプ",
+    "title1": "JUMP",
+    "title2": "BIRTHDAY",
+    "subtitle": "あなたが生まれた日に発売された週刊少年ジャンプは何号？"
+  },
+  "search": {
+    "label": "生年月日",
+    "period": "対応期間：{min} – {max}",
+    "loading": "データを読み込み中…",
+    "error": "読み込みエラー。ページを更新してください。",
+    "outOfRange": "期間外の日付です（{min}–{max}）。",
+    "button": "探す",
+    "searching": "検索中…"
+  },
+  "badges": {
+    "yourIssue": "あなたの誕生号",
+    "currentIssue": "その日の発売号"
+  },
+  "result": {
+    "publisher": "週刊少年ジャンプ",
+    "released": "{date}発売",
+    "doubleIssue": "合併号（2週間分）",
+    "biweekly": "隔週発行期間（1969年10月以前）",
+    "firstOfYear": "その年の第1号！",
+    "ageLabel": "この号の発行からの経過",
+    "ageYears": "{count}年",
+    "noImage": "画像なし",
+    "notCovered": "その日は新号が発売されていませんでした（休刊）。この号がその期間をカバーしています。"
+  },
+  "share": {
+    "copy": "結果をシェア",
+    "copied": "リンクをコピーしました！",
+    "tweet": "{date}生まれ — 週刊少年ジャンプ{issue}が発売されていました！🗞️"
+  },
+  "footer": {
+    "credit": "データ提供：<link>Comic Vine</link> · ❤️"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "japanese": "週刊少年ジャンプ",
+    "title1": "JUMP",
+    "title2": "BIRTHDAY",
+    "subtitle": "Quel numéro de Weekly Shōnen Jump est sorti le jour de ta naissance ?"
+  },
+  "search": {
+    "label": "Ta date de naissance",
+    "period": "Période couverte : {min} – {max}",
+    "loading": "Chargement de la base de données…",
+    "error": "Erreur de chargement. Recharge la page.",
+    "outOfRange": "Date hors période ({min}–{max}).",
+    "button": "Trouver mon numéro",
+    "searching": "Recherche…"
+  },
+  "badges": {
+    "yourIssue": "Ton numéro de naissance",
+    "currentIssue": "Numéro en cours ce jour-là"
+  },
+  "result": {
+    "publisher": "Weekly Shōnen Jump",
+    "released": "Sorti le {date}",
+    "doubleIssue": "Numéro double — couvre 2 semaines",
+    "biweekly": "Période bihebdomadaire (avant oct. 1969)",
+    "firstOfYear": "1er numéro de l'année !",
+    "ageLabel": "Âge de ce numéro",
+    "ageYears": "{count, plural, one {# an} other {# ans}}",
+    "noImage": "Pas d'image",
+    "notCovered": "Pas de nouveau numéro ce jour-là (pause éditoriale). Ce numéro couvrait la période."
+  },
+  "share": {
+    "copy": "Partager ce résultat",
+    "copied": "Lien copié !",
+    "tweet": "Je suis né(e) le {date} — le numéro {issue} de Weekly Shōnen Jump était en kiosque ! 🗞️"
+  },
+  "footer": {
+    "credit": "Données : <link>Comic Vine</link> · Fait avec ❤️"
+  }
+}

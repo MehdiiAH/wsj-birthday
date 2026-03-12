@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "japanese": "週刊少年ジャンプ",
+    "title1": "JUMP",
+    "title2": "BIRTHDAY",
+    "subtitle": "Which issue of Weekly Shōnen Jump came out on your birthday?"
+  },
+  "search": {
+    "label": "Your date of birth",
+    "period": "Coverage: {min} – {max}",
+    "loading": "Loading the database…",
+    "error": "Loading error. Refresh the page.",
+    "outOfRange": "Date out of range ({min}–{max}).",
+    "button": "Find my issue",
+    "searching": "Searching…"
+  },
+  "badges": {
+    "yourIssue": "Your birthday issue",
+    "currentIssue": "Issue on sale that day"
+  },
+  "result": {
+    "publisher": "Weekly Shōnen Jump",
+    "released": "Released {date}",
+    "doubleIssue": "Double issue — covers 2 weeks",
+    "biweekly": "Biweekly period (before Oct. 1969)",
+    "firstOfYear": "1st issue of the year!",
+    "ageLabel": "Age of this issue",
+    "ageYears": "{count, plural, one {# year} other {# years}}",
+    "noImage": "No image",
+    "notCovered": "No new issue that day (editorial break). This issue covered the period."
+  },
+  "share": {
+    "copy": "Share this result",
+    "copied": "Link copied!",
+    "tweet": "I was born on {date} — Weekly Shōnen Jump issue {issue} was on newsstands! 🗞️"
+  },
+  "footer": {
+    "credit": "Data: <link>Comic Vine</link> · Made with ❤️"
+  }
+}
