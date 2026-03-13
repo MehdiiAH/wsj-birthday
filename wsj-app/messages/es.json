@@ -34,6 +34,10 @@
     "copied": "¡Enlace copiado!",
     "tweet": "Nací el {date} — ¡el número {issue} de Weekly Shōnen Jump estaba en los quioscos! 🗞️"
   },
+  "nav": {
+    "prev": "Anterior",
+    "next": "Siguiente"
+  },
   "footer": {
     "credit": "Datos: <link>Comic Vine</link> · Hecho con ❤️"
   }

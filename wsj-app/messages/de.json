@@ -34,6 +34,10 @@
     "copied": "Link kopiert!",
     "tweet": "Ich wurde am {date} geboren — Weekly Shōnen Jump Ausgabe {issue} lag damals in den Läden! 🗞️"
   },
+  "nav": {
+    "prev": "Vorherige",
+    "next": "Nächste"
+  },
   "footer": {
     "credit": "Daten: <link>Comic Vine</link> · Mit ❤️"
   }

@@ -81,10 +81,11 @@ function CoverImage({
 // ─── ResultCard ───────────────────────────────────────────────────────────────
 
 function ResultCard({
-  result, birthDate, locale, onShare, onTweet, copied,
+  result, birthDate, locale, onShare, onTweet, copied, onPrev, onNext, hasPrev, hasNext,
 }: {
   result: FindResult; birthDate: string; locale: string
   onShare: () => void; onTweet: () => void; copied: boolean
+  onPrev: () => void; onNext: () => void; hasPrev: boolean; hasNext: boolean
 }) {
   const t = useTranslations()
   const { issue } = result
@@ -188,6 +189,23 @@ function ResultCard({
             </svg>
           </button>
         </div>
+
+        <div className="px-4 pb-4 flex gap-2">
+          <button
+            onClick={onPrev}
+            disabled={!hasPrev}
+            className="flex-1 flex items-center justify-center gap-1.5 border border-wsj-border hover:border-[#444] disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#1a1a1a] active:scale-[0.98] transition-all duration-150 rounded-xl py-2.5 text-sm text-gray-300"
+          >
+            ← {t('nav.prev')}
+          </button>
+          <button
+            onClick={onNext}
+            disabled={!hasNext}
+            className="flex-1 flex items-center justify-center gap-1.5 border border-wsj-border hover:border-[#444] disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#1a1a1a] active:scale-[0.98] transition-all duration-150 rounded-xl py-2.5 text-sm text-gray-300"
+          >
+            {t('nav.next')} →
+          </button>
+        </div>
       </div>
 
       {lightboxOpen && (
@@ -209,6 +227,7 @@ function JumpBirthdayApp() {
   const [dataReady, setDataReady] = useState(false)
   const [date, setDate] = useState('')
   const [result, setResult] = useState<FindResult | null>(null)
+  const [issueIndex, setIssueIndex] = useState(-1)
   const [status, setStatus] = useState<Status>('idle')
   const [copied, setCopied] = useState(false)
   const resultRef = useRef<HTMLDivElement>(null)
@@ -230,7 +249,9 @@ function JumpBirthdayApp() {
       setStatus('loading')
       setTimeout(() => {
         const found = findIssueForDate(issueList, birthDate)
+        const idx = issueList.indexOf(found.issue)
         setResult(found)
+        setIssueIndex(idx)
         setStatus('found')
         router.replace(('/?d=' + dateStr) as never, { scroll: false })
         setTimeout(() => resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
@@ -269,6 +290,20 @@ function JumpBirthdayApp() {
     } catch {
       window.prompt('Copy this link:', window.location.href)
     }
+  }
+
+  const handlePrev = () => {
+    if (issueIndex <= 0) return
+    const newIdx = issueIndex - 1
+    setIssueIndex(newIdx)
+    setResult({ issue: issues[newIdx], covered: true })
+  }
+
+  const handleNext = () => {
+    if (issueIndex >= issues.length - 1) return
+    const newIdx = issueIndex + 1
+    setIssueIndex(newIdx)
+    setResult({ issue: issues[newIdx], covered: true })
   }
 
   const handleTweet = () => {
@@ -372,6 +407,10 @@ function JumpBirthdayApp() {
               onShare={handleShare}
               onTweet={handleTweet}
               copied={copied}
+              onPrev={handlePrev}
+              onNext={handleNext}
+              hasPrev={issueIndex > 0}
+              hasNext={issueIndex < issues.length - 1}
             />
           )}
         </div>
