@@ -212,6 +212,7 @@ function JumpBirthdayApp() {
   const [status, setStatus] = useState<Status>('idle')
   const [copied, setCopied] = useState(false)
   const resultRef = useRef<HTMLDivElement>(null)
+  const initializedRef = useRef(false)
 
   const doSearch = useCallback(
     (dateStr: string, issueList: Issue[]) => {
@@ -239,6 +240,8 @@ function JumpBirthdayApp() {
   )
 
   useEffect(() => {
+    if (initializedRef.current) return
+    initializedRef.current = true
     getIssues()
       .then(data => {
         setIssues(data)
@@ -311,7 +314,7 @@ function JumpBirthdayApp() {
           <label className="block text-[11px] font-semibold tracking-[0.15em] uppercase text-wsj-muted mb-2">
             {t('search.label')}
           </label>
-          <div className="relative mb-3">
+          <div className="relative mb-3 overflow-hidden rounded-xl">
             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-wsj-muted pointer-events-none">📅</span>
             <input
               type="date"
